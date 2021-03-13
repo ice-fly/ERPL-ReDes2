@@ -1,0 +1,47 @@
+/*CSS (always applied)*/
+:root {
+	/*Colors*/
+	--ERPLLightBlue: rgb(2, 85, 154); 
+	--ERPLDarkBlue: rgb(0, 0, 127); 
+	--ERPLPurple: rgb(57, 29, 134); 
+}
+* {
+	box-sizing: border-box;
+}
+html, body {
+	min-height: 100%;
+	/* sets the body height of the browser, so that backgrounds and div heights work correctly. Color and background will almost certainly be altered; they are just placeholders */
+}
+	
+body {
+	text-rendering: optimizeLegibility;
+	/* sets the base font size for the document; turns on kerning pairs and ligatures */
+}
+
+article, aside, audio, 
+footer, header, nav, section, video {
+	display: block; 
+	/* ensures that older browsers will display HTML5 elements correctly */
+}
+
+p { 
+	-ms-word-break: break-all;
+	word-break: break-all;
+	word-break: break-word;
+	-moz-hyphens: auto;
+	-webkit-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
+	/* sets hyphenation by default on paragraphs */
+}
+	
+textarea { 
+	resize: vertical;
+	/* changes textarea resizing from "both" (UA default) to vertical only */
+}
+
+img { 
+	border: none;
+	max-width: 100%;
+	/* removes outlines from linked images (for older browsers and IE), sets up images for responsive design layout */
+}

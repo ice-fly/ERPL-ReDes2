@@ -1,0 +1,12 @@
+/*CSS (Light Mode)*/
+:root {
+	/*Colors*/
+	--ERPLLightBlue: rgb(2, 85, 154); 
+	--ERPLDarkBlue: rgb(0, 0, 127); 
+	--ERPLPurple: rgb(57, 29, 134); 
+}
+body {
+    color: white;
+    background-color: var(--ERPLLightBlue);
+    font-family: 'IBM Plex Mono', monospace;
+}
