@@ -30,34 +30,37 @@
 				<h1>ERPL</h1>
 			</div>
 			<nav class="NavMenu">
-				<div>
+				<a href="javascript:void(0);" onclick="menu('NavBlock')">
+				  <h1>Hamborger</h1>
+				</a>
+				<div id="NavBlock" class="NavBlock">
 					<div class="NavButton">
 						<a>
 							<h2>Home</h2>
 						</a>
 					</div>
 					<div class="NavButton">
-						<a>
+						<a href="javascript:void(0);" onclick="menu('AboutBlock')" ondblclick="goto('AboutSection')">
 							<h2>About</h2>
 						</a>
 					</div>
-					<div class="NavDropDown">
+					<div id="AboutBlock" class="NavDropdown">
 						<div class="NavButton">
 							<a>
-								<h2>Leadership</h2>
+								<h2>Mission</h2>
 							</a>
 						</div>
 						<div class="NavButton">
 							<a>
-								<h2>Alumni</h2>
+								<h2>History</h2>
 							</a>
 						</div>
 					</div>
 					<div class="NavButton">
-						<a>
+						<a href="javascript:void(0);" onclick="menu('ProjectsBlock')" ondblclick="goto('Projects')">
 							<h2>Projects</h2>
 						</a>
-						<div class="NavDropDown">
+						<div id="ProjectsBlock" class="NavDropdown">
 							<div class="NavButton">
 								<a>
 									<h2>Liquids</h2>
@@ -86,20 +89,20 @@
 						</div>
 					</div>
 					<div class="NavButton">
-						<a>
+						<a href="javascript:void(0);" onclick="menu('MembersBlock')" ondblclick="goto('LeadershipSection')">
 							<h2>Members</h2>
 						</a>
-					</div>
-					<div class="NavDropDown">
-						<div class="NavButton">
-							<a>
-								<h2>Leadership</h2>
-							</a>
-						</div>
-						<div class="NavButton">
-							<a>
-								<h2>Alumni</h2>
-							</a>
+						<div  id="MembersBlock" class="NavDropdown">
+							<div class="NavButton">
+								<a>
+									<h2>Leadership</h2>
+								</a>
+							</div>
+							<div class="NavButton">
+								<a>
+									<h2>Alumni</h2>
+								</a>
+							</div>
 						</div>
 					</div>
 					<div class="NavButton">
@@ -108,10 +111,10 @@
 						</a>
 					</div>
 					<div class="NavButton">
-						<a>
+						<a href="javascript:void(0);" onclick="menu('SocialBlock')" ondblclick="goto('SocialSection')">
 							<h2>Social</h2>
 						</a>
-						<div class="NavDropDown">
+						<div id="SocialBlock" class="NavDropdown">
 							<div class="NavButton">
 								<a>
 									<h2>Instagram</h2>
@@ -148,21 +151,21 @@
 								</a>
 							</div>
 						</div>
-						<div class="NavButton">
-							<a>
-								<h2>Contact</h2>
-							</a>
-							<div class="NavDropDown">
-								<div class="NavButton">
-									<a>
-										<h2>Donate</h2>
-									</a>
-								</div>
-								<div class="NavButton">
-									<a>
-										<h2>Join</h2>
-									</a>
-								</div>
+					</div>
+					<div class="NavButton">
+						<a href="javascript:void(0);" onclick="menu('ContactBlock')" ondblclick="goto('Contact')">
+							<h2>Contact</h2>
+						</a>
+						<div id="ContactBlock" class="NavDropdown">
+							<div class="NavButton">
+								<a>
+									<h2>Donate</h2>
+								</a>
+							</div>
+							<div class="NavButton">
+								<a>
+									<h2>Join</h2>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -170,8 +173,8 @@
 			</nav>
 		</div>
 		<div class="Splash">
-			<h3>Embry-Riddle Aeronautical University</h3>
-			<h1>Experimental Rocket Propulsion Lab</h1>
+			<h3>Embry-Riddle Aeronautical&nbsp;University</h3>
+			<h1>Experimental&nbsp;Rocket Propulsion&nbsp;Lab</h1>
 		</div>
 		<section class="AboutSection">
 			<h3>About</h3>
@@ -302,6 +305,21 @@
 		</section>
 		<footer class="Footer"></footer>
 		<script>
+			const NavDropdowns = document.querySelectorAll("div.NavDropdown");
+			function menu(id) { //Toggle Dropdown menu
+				var x = document.getElementById(id);
+				NavDropdowns.forEach(function(dropdowns){
+					if (dropdowns.id!=id){dropdowns.style.display = "none"};
+				});
+				if (x.style.display === "block") {
+					x.style.display = "none";
+				} else {
+					x.style.display = "block";
+				}
+			}
+			function goto(location) {
+				console.log(location) //Placeholder
+			}
 			//Loading scripts go here
 		</script>
 	</body>
